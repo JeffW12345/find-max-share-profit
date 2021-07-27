@@ -20,7 +20,7 @@ namespace SharesApp
                 colonPresent = true;
             }
             bool slashPresent = false;
-            if (userInput.Contains('\\') || userInput.Contains('/'))
+            if (userInput.Contains('\\') || userInput.Contains('/'))  // In this code,'\\' refers to a single backslash.
             {
                 slashPresent = true;
             }
@@ -86,11 +86,12 @@ namespace SharesApp
 
         private static List<int> GetBuyAndSellDates(Dictionary<int, double> dayToPriceDict)
         {
-            // In the dictionary below, List<int> key stores the opening date [0] and the closing date [1].
+            // In the dictionary below, the List<int> key stores the opening date [0] and the closing date [1].
             Dictionary<List<int>, double> openAndCloseDayToProfitDictionary = new Dictionary<List<int>, double>();
             // The 'for' loop below obtains the profit or loss from buying on every possible opening day and selling on 
             // every possible corresponding closing day. That figure is stored as a value in 'openAndCloseDayToDifferenceDict'.
             // The resulting data is then used to determine which combination of buy and sell dates would have been most profitable.
+            // It is assumed that it is not possible to buy and sell on the same day. 
             int numDays = dayToPriceDict.Keys.Count;
             for (int openingDay = 0; openingDay < numDays; openingDay++)
             {
