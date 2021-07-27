@@ -3,7 +3,7 @@ Imports a series of share prices, and finds what the optimal buy and sell dates 
 The program imports a list of comma-separated numbers, where each number represents the opening share price on a given day (the first number is day 1 of the month's share price, the second is
 day 2's share price, etc).
   
-The program determines what the optimal day to buy and sell the shares would have been, to maximise profit.
+The program determines what the optimal day to buy and sell the shares would have been, to maximise profit. It assumes that it is not possible to buy the share at a price and then go back in time and sell it when the price was higher! 
   
 It produces a console output as follows:
  
